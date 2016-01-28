@@ -9,7 +9,6 @@ class Deployer
   end
 
   def post_todays_schedule
-    binding.pry
     today = Date.today.strftime('%B %d, %Y')
     client.merge(repo, 'master', 'tomorrow', {commit_message: "Deployed Schedule for #{today}"})
   end
