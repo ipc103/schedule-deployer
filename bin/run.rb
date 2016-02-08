@@ -1,3 +1,5 @@
 require_relative "../lib/deployer"
 
-Deployer.new('ipc103/test-schedule').post_todays_schedule
+puts "Running..."
+Deployer.new('learn-co-curriculum/web-0216').post_todays_schedule
+puts "Deployed!"
