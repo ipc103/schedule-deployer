@@ -11,6 +11,7 @@ class Deployer
   def post_todays_schedule
     today = Date.today.strftime('%B %d, %Y')
     client.merge(repo, 'master', 'tomorrow', {commit_message: "Deployed Schedule for #{today}"})
+    client.delete_branch(repo, 'tomorrow')
   end
 
 end
